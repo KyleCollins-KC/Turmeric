@@ -327,9 +327,9 @@ input, select, textarea {
     /* ... (keep display, height) ... */
     flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: 44%;    /* REDUCED */
-    width: 44%;         /* REDUCED */
-    max-width: 44%;     /* REDUCED */
+    flex-basis: 43%;    /* REDUCED */
+    width: 43%;         /* REDUCED */
+    max-width: 43%;     /* REDUCED */
 }
 
 /* Target the text content container */
@@ -337,9 +337,9 @@ input, select, textarea {
     /* ... (keep min-width if needed) ... */
     flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: 49%;    /* REDUCED */
-    width: 49%;         /* REDUCED */
-    max-width: 49%;     /* REDUCED */
+    flex-basis: 48%;    /* REDUCED */
+    width: 48%;         /* REDUCED */
+    max-width: 48%;     /* REDUCED */
 }
 
 /* --- Responsive adjustments - NO CHANGE NEEDED HERE --- */
