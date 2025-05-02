@@ -305,34 +305,45 @@ input, select, textarea {
 	
 	  }
 
-	  /* Target the container section */
+/* Target the container section - NO CHANGE NEEDED HERE */
 .spotlights section {
-    display: flex;         /* Use flexbox for side-by-side layout */
-    align-items: flex-start; /* Align items to the top */
-    gap: 1em;              /* Add some space between video and text */
-    flex-wrap: wrap;       /* Allow items to wrap on smaller screens */
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    flex-wrap: wrap;
 }
-
 
 /* Target the video element specifically */
 .spotlights section .step-video {
-    /* ... (keep display, height) ... */
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: 40%;    /* REDUCED */
-    width: 40%;         /* REDUCED */
-    max-width: 40%;     /* REDUCED */
+    display: block;     /* Keep */
+    flex-grow: 0;       /* Keep */
+    flex-shrink: 1;     /* Keep */
+    flex-basis: 40%;    /* Keep reduced */
+    width: 40%;         /* Keep reduced */
+    max-width: 40%;     /* Keep reduced */
+
+    /* --- THE KEY FIX --- */
+    aspect-ratio: 16 / 9; /* Correct for 1920x1080 */
+    /* --- REMOVE THIS LINE --- */
+    /* height: auto; */
+    /* --- /REMOVE THIS LINE --- */
+
+    overflow: hidden;   /* Add for safety */
 }
 
-/* Target the text content container */
+/* Target the text content container - NO CHANGE NEEDED HERE */
 .spotlights section .content {
-    /* ... (keep min-width if needed) ... */
     flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: 45%;    /* REDUCED */
-    width: 45%;         /* REDUCED */
-    max-width: 45%;     /* REDUCED */
+    flex-basis: 45%;    /* Keep reduced */
+    width: 45%;         /* Keep reduced */
+    max-width: 45%;     /* Keep reduced */
+    min-width: 0;       /* Keep */
 }
+
+/* --- Responsive adjustments - NO CHANGE NEEDED HERE --- */
+/* ... */
+
 
 /* --- Responsive adjustments - NO CHANGE NEEDED HERE --- */
 @media (max-width: 768px) {
