@@ -321,26 +321,25 @@ input, select, textarea {
     flex-wrap: wrap;
 }
 
+
 /* Target the video element specifically */
 .spotlights section .step-video {
-    display: block;     /* Keep this */
-    flex-grow: 0;       /* CHANGE: Prevent growing */
-    flex-shrink: 1;     /* Keep allowing shrinking */
-    flex-basis: 45%;    /* Keep ideal basis */
-    width: 45%;         /* ADD: Explicit width */
-    max-width: 45%;     /* Keep max-width */
-    height: auto;       /* Keep aspect ratio */
+    /* ... (keep display, height) ... */
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 44%;    /* REDUCED */
+    width: 44%;         /* REDUCED */
+    max-width: 44%;     /* REDUCED */
 }
 
 /* Target the text content container */
 .spotlights section .content {
-    flex-grow: 0;       /* CHANGE: Prevent growing (unless you want text to fill extra space, then keep 1) */
-    flex-shrink: 1;     /* Keep allowing shrinking */
-    flex-basis: 50%;    /* Keep ideal basis */
-    width: 50%;         /* ADD: Explicit width */
-    max-width: 50%;     /* Keep max-width */
-    /* ADD if text content itself overflows its box, often needed */
-    min-width: 0;
+    /* ... (keep min-width if needed) ... */
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 49%;    /* REDUCED */
+    width: 49%;         /* REDUCED */
+    max-width: 49%;     /* REDUCED */
 }
 
 /* --- Responsive adjustments - NO CHANGE NEEDED HERE --- */
