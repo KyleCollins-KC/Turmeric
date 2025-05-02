@@ -313,23 +313,15 @@ input, select, textarea {
     flex-wrap: wrap;       /* Allow items to wrap on smaller screens */
 }
 
-/* Target the container section - NO CHANGE NEEDED HERE */
-.spotlights section {
-    display: flex;
-    align-items: flex-start;
-    gap: 2em;
-    flex-wrap: wrap;
-}
-
 
 /* Target the video element specifically */
 .spotlights section .step-video {
     /* ... (keep display, height) ... */
     flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: 43%;    /* REDUCED */
-    width: 43%;         /* REDUCED */
-    max-width: 43%;     /* REDUCED */
+    flex-basis: 40%;    /* REDUCED */
+    width: 40%;         /* REDUCED */
+    max-width: 40%;     /* REDUCED */
 }
 
 /* Target the text content container */
@@ -337,9 +329,9 @@ input, select, textarea {
     /* ... (keep min-width if needed) ... */
     flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: 48%;    /* REDUCED */
-    width: 48%;         /* REDUCED */
-    max-width: 48%;     /* REDUCED */
+    flex-basis: 45%;    /* REDUCED */
+    width: 45%;         /* REDUCED */
+    max-width: 45%;     /* REDUCED */
 }
 
 /* --- Responsive adjustments - NO CHANGE NEEDED HERE --- */
