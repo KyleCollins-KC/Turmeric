@@ -313,30 +313,46 @@ input, select, textarea {
     flex-wrap: wrap;       /* Allow items to wrap on smaller screens */
 }
 
+/* Target the container section - NO CHANGE NEEDED HERE */
+.spotlights section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
 /* Target the video element specifically */
 .spotlights section .step-video {
-    flex: 1 1 45%;      /* Allow video to grow/shrink, aim for ~45% width */
-    max-width: 45%;     /* Prevent it from exceeding 45% */
-    height: auto;       /* Maintain aspect ratio */
-    display: block;     /* Ensures proper block-level behavior */
+    display: block;     /* Keep this */
+    flex-grow: 0;       /* CHANGE: Prevent growing */
+    flex-shrink: 1;     /* Keep allowing shrinking */
+    flex-basis: 45%;    /* Keep ideal basis */
+    width: 45%;         /* ADD: Explicit width */
+    max-width: 45%;     /* Keep max-width */
+    height: auto;       /* Keep aspect ratio */
 }
 
 /* Target the text content container */
 .spotlights section .content {
-    flex: 1 1 50%;      /* Allow text to grow/shrink, aim for ~50% width */
-    max-width: 50%;
+    flex-grow: 0;       /* CHANGE: Prevent growing (unless you want text to fill extra space, then keep 1) */
+    flex-shrink: 1;     /* Keep allowing shrinking */
+    flex-basis: 50%;    /* Keep ideal basis */
+    width: 50%;         /* ADD: Explicit width */
+    max-width: 50%;     /* Keep max-width */
+    /* ADD if text content itself overflows its box, often needed */
+    min-width: 0;
 }
 
-/* --- Optional: Responsive adjustments for smaller screens --- */
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
+/* --- Responsive adjustments - NO CHANGE NEEDED HERE --- */
+@media (max-width: 768px) {
     .spotlights section {
-        flex-direction: column; /* Stack video and text vertically */
-        align-items: center;    /* Center items */
+        flex-direction: column;
+        align-items: center;
     }
 
     .spotlights section .step-video,
     .spotlights section .content {
-        flex-basis: 90%;  /* Take up more width when stacked */
+        flex-basis: 90%;
         max-width: 90%;
     }
 }
